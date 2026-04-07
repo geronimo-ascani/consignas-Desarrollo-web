@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkyTech Drones</title>
+
+  <!-- Tailwind CSS desde CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fuente distintiva desde Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700;900&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, nav { font-family: 'Exo 2', sans-serif; }
+
+    /* Animación suave de entrada para las tarjetas */
+    .card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,200,255,0.15); }
+
+    /* Efecto de brillo en el hero */
+    .hero-glow {
+      background: radial-gradient(ellipse at 60% 50%, rgba(0,200,255,0.12) 0%, transparent 70%);
+    }
+  </style>
+</head>
+
+<body class="bg-gray-950 text-gray-100">
+
+  <!-- ═══════════════════════════════════════════
+       NAVBAR
+  ════════════════════════════════════════════ -->
+  <nav class="flex items-center justify-between px-8 py-4 bg-gray-900 border-b border-gray-800 sticky top-0 z-50">
+    <!-- Logo -->
+    <span class="text-2xl font-black text-cyan-400 tracking-widest">SKY<span class="text-white">TECH</span></span>
+
+    <!-- Links de navegación -->
+    <div class="flex flex-row flex-nowrap items-center gap-12">
+      <div class="border border-gray-600 hover:border-cyan-400 rounded-lg transition px-4 py-2"><a href="#contacto">Contacto</a></div>
+      <div class="border border-gray-600 hover:border-cyan-400 rounded-lg transition px-4 py-2"><a href="#servicios">Servicios</a></div>
+      <div class="border border-gray-600 hover:border-cyan-400 rounded-lg transition px-4 py-2"><a href="#drones">Drones</a></div>
+    </div>
+    <!-- Botón CTA -->
+    <a href="#contacto" class="bg-cyan-500 hover:bg-cyan-400 text-gray-950 font-bold px-5 py-2 rounded-lg text-sm transition">
+      Cotizar ahora
+    </a>
+  </nav>
+
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ════════════════════════════════════════════ -->
+  <section class="hero-glow min-h-[90vh] flex flex-col items-center justify-center text-center px-6 py-20">
+
+    <p class="text-cyan-400 text-sm font-semibold tracking-widest uppercase mb-4">
+      Tecnología aérea al alcance de todos
+    </p>
+
+    <h1 class="text-5xl md:text-7xl font-black leading-tight mb-6">
+      Venta · Reparación<br />
+      <span class="text-cyan-400">&amp; Alquiler</span> de Drones
+    </h1>
+
+    <p class="text-gray-400 text-lg max-w-xl mb-10">
+      Somos especialistas en drones profesionales y recreativos.
+      Encontrá el equipo ideal o dejá el tuyo en las mejores manos.
+    </p>
+
+    <div class="flex gap-4 flex-wrap justify-center">
+      <a href="#drones"   class="bg-cyan-500 hover:bg-cyan-400 text-gray-950 font-bold px-7 py-3 rounded-lg transition">Ver drones</a>
+      <a href="#servicios" class="border border-gray-600 hover:border-cyan-400 text-gray-300 hover:text-cyan-400 px-7 py-3 rounded-lg transition">Nuestros servicios</a>
+    </div>
+
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       SERVICIOS  (3 columnas)
+  ════════════════════════════════════════════ -->
+  <section id="servicios" class="px-6 py-20 bg-gray-900">
+
+    <h2 class="text-center text-3xl font-black mb-12">¿Qué hacemos?</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+
+      <!-- Tarjeta Venta -->
+      <div class="card bg-gray-800 rounded-2xl p-8 border border-gray-700">
+        <div class="text-4xl mb-4">🛒</div>
+        <h3 class="text-xl font-bold mb-2 text-cyan-400">Venta</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          Amplio catálogo de drones para fotografía, agricultura, inspección y uso recreativo.
+          Asesoramiento personalizado en cada compra.
+        </p>
+      </div>
+
+      <!-- Tarjeta Reparación -->
+      <div class="card bg-gray-800 rounded-2xl p-8 border border-gray-700">
+        <div class="text-4xl mb-4">🔧</div>
+        <h3 class="text-xl font-bold mb-2 text-cyan-400">Reparación</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          Servicio técnico certificado. Reparamos motores, ESC, cámaras, gimbal y estructuras
+          de cualquier marca en tiempo récord.
+        </p>
+      </div>
+
+      <!-- Tarjeta Alquiler -->
+      <div class="card bg-gray-800 rounded-2xl p-8 border border-gray-700">
+        <div class="text-4xl mb-4">📦</div>
+        <h3 class="text-xl font-bold mb-2 text-cyan-400">Alquiler</h3>
+        <p class="text-gray-400 text-sm leading-relaxed">
+          Alquilá el drone perfecto para tu proyecto por día o semana.
+          Incluye seguro, batería extra y soporte técnico remoto.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       DRONES EN VENTA  (productos)
+  ════════════════════════════════════════════ -->
+  <section id="drones" class="px-6 py-20 bg-gray-950">
+
+    <h2 class="text-center text-3xl font-black mb-12">Modelos destacados</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+
+      <!-- Producto 1 -->
+      <div class="card bg-gray-800 rounded-2xl overflow-hidden border border-gray-700">
+        <div class="p-6">
+          <h3 class="font-bold text-lg mb-1">Mini 4 Pro</h3>
+          <p class="text-gray-400 text-sm mb-4">Perfecto para fotografía aérea. Cámara 4K, 34 min de vuelo.</p>
+          <div class="flex flex-col gap-8">
+            <span class="text-cyan-400 font-black text-xl">$1.200 USD</span>
+            <button class="bg-cyan-500 hover:bg-cyan-400 text-gray-950 text-sm font-bold px-4 py-2 rounded-lg transition">
+              Comprar
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 2 -->
+      <div class="card bg-gray-800 rounded-2xl overflow-hidden border border-gray-700">
+        <div class="p-6">
+          <h3 class="font-bold text-lg mb-1">EVO II Pro</h3>
+          <p class="text-gray-400 text-sm mb-4">Drone profesional con sensor 1" y 40 min de autonomía.</p>
+          <div class="flex flex-col gap-8">
+            <div class="text-cyan-400 font-black text-xl">$2.800 USD</div>
+            <button class="bg-cyan-500 hover:bg-cyan-400 text-gray-950 text-sm font-bold px-4 py-2 rounded-lg transition">
+              Comprar
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="card bg-gray-800 rounded-2xl overflow-hidden border border-gray-700">
+        <div class="p-6">
+          <h3 class="font-bold text-lg mb-1">AgriDrone X8</h3>
+          <p class="text-gray-400 text-sm mb-4">Diseñado para fumigación agrícola. Carga útil 10 kg.</p>
+          <div class="flex flex-col gap-8">
+            <div class="text-cyan-400 font-black text-xl">$6.500 USD</div>
+            <button class="bg-cyan-500 hover:bg-cyan-400 text-gray-950 text-sm font-bold px-4 py-2 rounded-lg transition">
+              Comprar
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  
+
+
+  <!-- ═══════════════════════════════════════════
+       CONTACTO
+  ════════════════════════════════════════════ -->
+  <section id="contacto" class="px-6 py-20 bg-gray-900">
+
+    <h2 class="text-center text-3xl font-black mb-4">Contactanos</h2>
+    <p class="text-center text-gray-400 mb-12">Respondemos en menos de 24 hs hábiles</p>
+
+    <!-- Formulario simple -->
+    <form class="max-w-lg mx-auto flex flex-col gap-5">
+
+      <input
+        type="text"
+        placeholder="Tu nombre"
+        class="bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-sm outline-none focus:border-cyan-400 transition"
+      />
+
+      <input
+        type="email"
+        placeholder="Tu correo electrónico"
+        class="bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-sm outline-none focus:border-cyan-400 transition"
+      />
+
+      <!-- Selector de servicio -->
+      <select class="bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-sm outline-none focus:border-cyan-400 transition text-gray-300">
+        <option value="">¿Qué servicio necesitás?</option>
+        <option>Venta</option>
+        <option>Reparación</option>
+        <option>Alquiler</option>
+        <option>Otro</option>
+      </select>
+
+      <textarea
+        placeholder="Contanos más sobre tu consulta..."
+        rows="4"
+        class="bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-sm outline-none focus:border-cyan-400 transition resize-none"
+      ></textarea>
+
+      <button
+        type="submit"
+        class="bg-cyan-500 hover:bg-cyan-400 text-gray-950 font-bold py-3 rounded-lg transition text-sm"
+      >
+        Enviar consulta
+      </button>
+
+    </form>
+
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════ -->
+  <footer class="bg-gray-950 border-t border-gray-800 text-center py-8 text-gray-500 text-sm">
+    <p class="font-black text-cyan-400 text-lg mb-1">SKYTECH DRONES</p>
+    <p>© 2026 · Todos los derechos reservados · Buenos Aires, Argentina</p>
+  </footer>
+
+</body>
+</html>
